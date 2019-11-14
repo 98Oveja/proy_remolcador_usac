@@ -1,0 +1,203 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    font-family: "Source Sans Pro",Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    color: #fff;
+}
+html{
+    font-size: 62.5%;
+}
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+body{
+    position: relative;
+    font-size: 14px;
+    font-size: 1.4rem;
+    background-color: #084C66;
+}
+.centrado{
+    position: relative;
+    top:50%;
+
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#contenedor{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /* border: 2px solid #fff; */
+    width: 100%;
+}
+#principal, #libro_principios{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+#principal{
+    top: 0;
+}
+#libro_principios{
+    top: 100%;
+}
+
+/*logotipo*/
+#logo{
+    margin-top: 40px;
+    text-align: center;
+}
+#logo > img{ /*selector de descendencia directa*/
+    width: 30%;
+    max-width: 150px;
+    height: auto;
+    margin: 0;
+    border: solid 2px #fff;
+    border-radius: 75px;
+}
+/*MENSAJES Y FRASES*/
+#principal > section {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    width: 70%;
+    margin: 0 auto;
+}
+
+.frase{
+    font-size: 60px;
+    font-size: 6rem;
+    text-align: center;
+
+    -webkit-animation: fade-in-out 20s infinite;
+    -moz-animation: fade-in-out 20s infinite;
+    -o-animation: fade-in-out 20s infinite;
+    animation: fade-in-out 20s infinite;
+
+}
+#frase-1{
+    opacity: 1;
+    animation-delay:  0;
+}
+#frase-2{
+    opacity: 0;
+    animation-delay: 5s;
+}
+#frase-3{
+    opacity: 0;
+    animation-delay: 10s;
+}
+#frase-4{
+    opacity: 0;
+    animation-delay: 15s;
+}
+@keyframes fade-in-out{
+    0%, 33%, 100% {opacity: 0;}
+    16%{opacity: 1;}
+}
+/*--------------FLECHA PARA CAMBIAR------------------------------*/
+#flecha_libro{
+    position: absolute;
+    bottom: 1%;
+    width: 100%;
+
+    text-align: center;
+}
+#flecha_libro > p{
+    margin: 0;
+    font-size: 25px;
+    font-size: 2.5rem;
+
+    -webkit-animation:  oscilar 3s 2s infinite ease-in-out;
+    -moz-animation:     oscilar 3s 2s infinite ease-in-out;
+    -o-animation:       oscilar 3s 2s infinite ease-in-out;
+    animation:          oscilar 3s 2s infinite ease-in-out;
+}
+#flecha{
+    font-size: 50px;
+    font-size: 5rem;
+
+    text-decoration: none;
+}
+@keyframes oscilar{
+    0%, 20%, 40%, 100% {margin-bottom:0;}
+    10%, 30% {margin-bottom: 15px;}
+}
+
+/*----------------MEDIA QUERIES-------------------------*/
+@media (max-height: 480px) and (orientation:landscape){
+    #logo > img{
+        width: 10%;
+    }
+}
+
+/*----------- CALCULOS-------------------*/
+label{
+    display: block;
+    width: 90%;
+    margin: 0 auto 10px;
+    
+    font-size: 24px;
+    font-size: 2.4rem;
+    text-align: center;
+}
+#ingre_datos{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+#ingre_datos > h2{
+    font-size: 30px;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+#vel_giro, #peso_mat,#boton{
+    display: block;
+    width: 50%;
+    padding: 10px;
+    border: 0;
+    margin: 0 auto;
+
+    color: #fff;
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 200;
+}
+
+#vel_giro{
+    margin-bottom: 10px;
+    color: #000;
+    text-align: center;
+}
+#peso_mat{
+    margin-bottom: 10px;
+    color: #000;
+    text-align: center;
+}
+
+#boton{
+    padding: 10px 20px;
+
+    background-color: #0085b2;
+}
+#caja{
+    background: #fff;
+    color: #000;
+    width: 50%;
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}

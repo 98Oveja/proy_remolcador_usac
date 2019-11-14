@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proyecto | USAC</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.booklet.latest.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- [if IE]><script src="js/html5shiv.min.js"></script><![endif]-->
+</head>
+<body>
+    <div id="contenedor">
+        <article id="principal">
+            <h1 id="logo"><img src="img/Usac_logo.png" alt="Logo Universidad" title="Logo Universidad"></h1>
+            <section class="centrado"><p id="frase-1" class="frase">Remolcador 4.5</p></section>
+            <section class="centrado"><p id="frase-2" class="frase">Curso de Análisis Mecánico</p></section>
+            <section class="centrado"><p id="frase-3" class="frase">Ing. Daniel Charles Agustín</p></section>
+            <section class="centrado"><p id="frase-4" class="frase">Facultad de Ingeniería - USAC </p></section>
+            <footer id="flecha_libro">
+                <p>¡Empecemos!</p>
+                <p><a id="flecha" href="#libro_principios"><i class="icon icon-down-open-big"></i></a></p>
+            </footer>
+        </article>
+        <article id="libro_principios">
+            <div class="centrado">
+                <div id="ingre_datos">
+                    <!-- <form action="//q-interactiva.us9.list-manage.com/subscribe/post?u=9a88a2da70a1ba3e6fda98a9a&amp;id=2435d0147f"
+                        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+                        novalidate> -->
+                        <h2>CÁLCULO DE VELOCIDADES Y TENSIÓN</h2>
+                        <div id="mc_embed_signup_scroll">
+                            <label for="mce-EMAIL" id="etiqueta">Velocidad de giro del motor</label>
+                            <input type="text" id="vel_giro" placeholder="Ingresa velocidad">
+                            <label for="mc-2" id="etiqueta2">Peso del material (kg)</label>
+                            <input type="text" id="peso_mat" placeholder="Ingresa peso material">
+                            <input type="submit" value="Calcular" id="boton">
+                            <div style="position: absolute; left: -5000px;"><input type="text" name="b_9a88a2da70a1ba3e6fda98a9a_2435d0147f"
+                                    tabindex="-1" value=""></div>
+                            <div class="clear"></div>
+                        </div>
+                    <!-- </form> -->
+                    <br>
+                    <div id="caja"></div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/codigo.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#flecha_libro').fitText(1,2,{minFontSize:'5px',maxFontSize:'25px'});
+            $('.frase').fitText(1,2,{minFontSize:'25px', maxFontSize:'40px'});
+            $('#flecha').on('click',function(e){
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop:$('#libro_principios').offset().top
+                },500);
+            });
+            $("#boton").on("click", efec);
+            function efec() {
+                var cambio = {
+                    padding: "1em",
+                    transition: "all 2s ease"
+                };
+                $("#caja").css(cambio);
+            }
+        });
+    </script>
+</body>
+</html>
