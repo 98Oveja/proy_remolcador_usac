@@ -27,11 +27,11 @@ function calcular(){
     var t1 = m * gravedad;
 
     c.innerHTML = "RESULTADOS<br>";
-    c.innerHTML += "Velocidad en Polea B: "+Number(nb.toFixed(2))+" m/s^2";
+    c.innerHTML += "Velocidad en Polea B: "+Number(nb.toFixed(2))+" m/s";
     c.innerHTML += "<br>";
-    c.innerHTML += "Velocidad en Polea C: " + Number(nc.toFixed(2))+" m/s^2";
+    c.innerHTML += "Velocidad en Polea C: " + Number(nc.toFixed(2))+" m/s";
     c.innerHTML += "<br>";
-    c.innerHTML += "Velocidad en Polea D: "+Number(nd.toFixed(2))+" m/s^2";
+    c.innerHTML += "Velocidad en Polea D: "+Number(nd.toFixed(2))+" m/s";
     c.innerHTML += "<br>";
     c.innerHTML += "Tensión de la cuerda: " + Number(t1.toFixed(2)) + " N";
 }
